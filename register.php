@@ -10,7 +10,39 @@
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-<title>FILE UPLOADER</title>
+
+<style>
+        .header{
+            padding-left:450px;
+            padding-top:50px;
+        }
+        .table{
+            padding-left:450px;
+            padding-right:300px;
+        }
+    </style>
+    <script>
+        var check = function() {
+        if (document.getElementById('password').value ==
+            document.getElementById('confirmPassword').value) {
+            document.getElementById('message').style.color = 'green';
+            document.getElementById('message').innerHTML = 'matching';
+        } else {
+            document.getElementById('message').style.color = 'red';
+            document.getElementById('message').innerHTML = 'Password does not match';
+        }
+        }
+        function check_pass() {
+        if (document.getElementById('password').value ==
+                document.getElementById('confirmPassword').value) {
+            document.getElementById('submit').disabled = false;
+        } else {
+            document.getElementById('submit').disabled = true;
+        }
+        }
+    </script>
+
+<title>File Uploader</title>
 </head>
 <body>
 <div class="container-sm">
